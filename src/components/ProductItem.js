@@ -1,6 +1,6 @@
 
 
-const ProductItem = (props) => {
+function ProductItem  (props) {
   const product = props.product;
 
   return (

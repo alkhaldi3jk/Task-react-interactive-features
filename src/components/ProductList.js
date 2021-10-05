@@ -3,17 +3,28 @@ import ProductItem from "./ProductItem";
 import SearchBar from "./SearchBar";
 // Data
 import products from "../products";
+import { useState } from "react";
 
 const ProductList = () => {
-  const productList = products.map((product) => (
+
+const [item, setItem]= useState("")
+
+  const productList = products
+  .filter((product)=> product.name.includes(item))
+  .map((product) => (
     <ProductItem product={product} key={product.id} />
   ));
+  
 
   return (
-    <>
-      <SearchBar />
-      <div className="listWrapper">{productList}</div>
-    </>
+    <div>
+    
+      <SearchBar setItem={setItem}/>
+      <div className="listWrapper">
+        {productList}
+      </div>
+   
+    </div>
   );
 };
 

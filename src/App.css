@@ -35,3 +35,25 @@
 .productWrapper p{
     text-align: center;
 }
+
+.detail{
+    text-align: center;
+}
+.detail img{
+    width: 200px;
+    height: auto;
+}
+
+.home button{
+    width: 50px;
+    height: 20px;
+
+
+}
+
+.light-mode{
+    background-color: lightgoldenrodyellow;
+}
+.dark-mode{
+    background-color: rgb(56, 54, 54);
+}

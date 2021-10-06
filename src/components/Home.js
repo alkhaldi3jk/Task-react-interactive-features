@@ -1,8 +1,8 @@
-
-const Home = () => {
+const Home = (props) => {
   return (
     <div className="home">
       <h1>Cookies and Beyond</h1>
+      <button onClick={() => props.setMode(props.mode=== "light-mode"? "dark-mode":"light-mode")}>dark mode</button>
       <h3>Where cookie maniacs gather</h3>
       <img
         alt="cookie shop"
